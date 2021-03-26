@@ -1,0 +1,1 @@
+{"distinct_id":"test-hechun:11","properties":{"$screen_height":900,"$screen_width":1440,"customer_id":"test-hechun","messige_id":3,"error_2":"我是一个错误"},"anonymous_id":"test-hechun:11","type":"track","event":"$pageview","time":1597800000000,"project":"production"}

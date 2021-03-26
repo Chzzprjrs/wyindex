@@ -1,0 +1,5 @@
+{"distinct_id":"test-hechun:11","properties":{"$screen_height":900,"$screen_width":1440,"customer_id":"test-hechun","messige_id":1,"error_1":123456789101123455667},"anonymous_id":"test-hechun:11","type":"track","event":"$pageview","time":1597800000000,"project":"production"}
+{"distinct_id":"test-hechun:11","properties":{"$screen_height":900,"$screen_width":1440,"customer_id":"test-hechun","messige_id":2},"anonymous_id":"test-hechun:11","type":"track","event":"$pageview","time":1597803275000,"project":"default"}
+
+
+

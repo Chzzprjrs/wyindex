@@ -1,0 +1,59 @@
+错误原因:从服务端获取进度遇到配置问题，请修改配置后再重试，错误原因：详情请见前几条日志输出。
+error status:Getting progress from the server has a configuration problem, try changing the configuration and then try again, error status: please refer to previous log information for details.
+{
+  "log_agent_id" : "wangyue_0",
+  "source_path" : "/Users/wangyue/sensorsdata/logagent",
+  "file_match_pattern" : "logagent_log.*",
+  "sender_type" : "com.sensorsdata.analytics.tools.logagent.sender.BatchSender",
+  "processor_class_name" : null,
+  "reverse_file_list" : false,
+  "real_time_file_name" : null,
+  "service_uri" : "http://10.120.138.239:8106/log_agent",
+  "target_uri" : null,
+  "sending_speed_limit" : 0,
+  "context_file" : "/Users/wangyue/sensorsdata/logagent/logagent.pid.context",
+  "project" : "production",
+  "host_key" : "08:F8:BC:78:84:3B;AC:DE:48:00:11:22;F2:0B:C0:C8:F8:E9;F2:0B:C0:C8:F8:E9",
+  "send_data_timeout_ms" : 10000,
+  "standalone" : null,
+  "flush_sender_interval" : 10,
+  "batch_sender_buffer" : 150,
+  "version" : "SensorsAnalytics LogAgent_20191227",
+  "instance_id" : null,
+  "source_progress" : null,
+  "update_progress_time" : null,
+  "start_log_agent_time" : 1615533317068,
+  "service_request_time" : null,
+  "send_context_time" : null,
+  "client_ip" : null,
+  "server_id" : null,
+  "service_version" : 0,
+  "cookie_store" : null,
+  "speed" : null,
+  "latency_data_size_in_byte" : null,
+  "latency_data_files" : null,
+  "pid" : "2673",
+  "config_file" : "/Users/wangyue/sensorsdata/logagent/bin/../logagent.conf",
+  "cmd_args" : ""
+}
+2021-03-12 15:15:17,073 [main] INFO  [com.sensorsdata.analytics.tools.logagent.LogAgentMain] - LogAgent version: SensorsAnalytics LogAgent_20191227
+2021-03-12 15:15:17,085 [main] INFO  [com.sensorsdata.analytics.tools.logagent.LogAgentMain] - Config File: /Users/wangyue/sensorsdata/logagent/logagent.conf
+2021-03-12 15:15:17,125 [main] INFO  [com.sensorsdata.analytics.tools.logagent.LogAgentMain] - Use LogAgentID from conf
+2021-03-12 15:15:17,125 [main] INFO  [com.sensorsdata.analytics.tools.logagent.LogAgentMain] - LogAgent ID: wangyue_0
+2021-03-12 15:15:17,125 [main] INFO  [com.sensorsdata.analytics.tools.logagent.LogAgentMain] - Source config, path: '/Users/wangyue/sensorsdata/logagent', pattern: 'logagent_log.*'
+2021-03-12 15:15:17,264 [main] INFO  [com.sensorsdata.analytics.tools.logagent.LogAgentMain] - Service Uri: http://10.120.138.239:8106/log_agent
+2021-03-12 15:15:17,264 [main] INFO  [com.sensorsdata.analytics.tools.logagent.LogAgentMain] - Sender Type: BatchSender
+2021-03-12 15:15:17,264 [main] INFO  [com.sensorsdata.analytics.tools.logagent.LogAgentMain] - Project: production
+2021-03-12 15:15:17,280 [main] INFO  [com.sensorsdata.analytics.tools.logagent.LogAgentMain] - Pid file: /Users/wangyue/sensorsdata/logagent/logagent.pid
+2021-03-12 15:15:17,298 [main] INFO  [com.sensorsdata.analytics.extractor.common.Supervisor] - Executor lifecycle-1 started
+2021-03-12 15:15:17,298 [Executor-1] INFO  [com.sensorsdata.analytics.tools.logagent.LogAgent] - Use new local context file.
+2021-03-12 15:15:17,841 [Executor-1] INFO  [com.sensorsdata.analytics.tools.logagent.ServiceClient] - LogAgent ID: LogAgent.150, sourceProgress: null, target: null
+2021-03-12 15:15:17,841 [Executor-1] WARN  [com.sensorsdata.analytics.tools.logagent.ServiceClient] - 当前实例配置的 LogAgentID: 'wangyue_0' 已经在服务端与其他机器绑定，绑定的机器: '08:F8:BC:78:84:3B;3A:72:BD:9C:C6:E9;3A:72:BD:9C:C6:E9;AC:DE:48:00:11:22'，上次请求 IP: '10.90.28.102'; 本机: '08:F8:BC:78:84:3B;AC:DE:48:00:11:22;F2:0B:C0:C8:F8:E9;F2:0B:C0:C8:F8:E9'，本次请求 IP: '10.90.28.102'
+2021-03-12 15:15:17,841 [Executor-1] WARN  [com.sensorsdata.analytics.tools.logagent.ServiceClient] - 如果是（错误使用方式）多台机器使用了相同的 LogAgentID，请换用其他 LogAgentID 再启动；
+2021-03-12 15:15:17,841 [Executor-1] WARN  [com.sensorsdata.analytics.tools.logagent.ServiceClient] - 如果是（错误使用方式）多台机器都用 FQDN 作为 LogAgentID 但取值相同，请显式为每台机器指定不同的 LogAgentID。
+2021-03-12 15:15:17,842 [Executor-1] ERROR [com.sensorsdata.analytics.tools.logagent.FailCollector] - 从服务端获取进度遇到配置问题，请修改配置后再重试，错误原因：
+2021-03-12 15:15:17,842 [Executor-1] ERROR [com.sensorsdata.analytics.tools.logagent.FailCollector] - Getting progress from the server has a configuration problem, try changing the configuration and then try again, error status: 
+com.sensorsdata.analytics.extractor.common.exception.ExitException: 服务端主动拒绝本次进度请求
+	at com.sensorsdata.analytics.tools.logagent.ServiceClient.getProgress(ServiceClient.java:64)
+	at com.sensorsdata.analytics.tools.logagent.LogAgent.run(LogAgent.java:153)
+	at java.lang.Thread.run(Thread.java:748)

@@ -1,0 +1,4 @@
+event.target: 指向事件源，即它始终指向触发事件本身的dom元素，用于事件冒泡
+与this的区别：比如<div><span></span></div>,点击span时，更改span的颜色
+            this:由于事件冒泡机制，div将会更改颜色。
+            event.target;只会改变span的颜色。
